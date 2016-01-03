@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="NavigationMenuSample.Views.Friends"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NavigationMenuSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:ctl="using:NavigationMenuSample.Controls"    
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Frame x:Name="frame" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="800">
+            <maps:MapControl x:Name="myMap" MapServiceToken="hhMv8ajbsNkjTqZbNmIYHQ"
+        		ZoomLevel="{Binding Value, ElementName=zoomSlider, Mode=TwoWay}"
+        		Heading="{Binding Value, ElementName=headingSlider, Mode=TwoWay}"
+        		DesiredPitch="{Binding Value, ElementName=desiredPitchSlider, Mode=TwoWay}" Margin="0,0,-52.667,0" Height="800" VerticalAlignment="Top" Width="569"
+                                     />
+        </Frame>
+
+    </Grid>
+</Page>
