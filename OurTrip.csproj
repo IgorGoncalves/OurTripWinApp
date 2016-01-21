@@ -97,29 +97,28 @@
     <Compile Include="Controls\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="NavMenuItem.cs" />
-    <Compile Include="Views\BasicPage.xaml.cs">
-      <DependentUpon>BasicPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Providers\FriendsProvider.cs" />
+    <Compile Include="Providers\LocationProvider.cs" />
+    <Compile Include="Providers\UserProvider.cs" />
     <Compile Include="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CommandBarPage.xaml.cs">
-      <DependentUpon>CommandBarPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BasicSubPage.xaml.cs">
-      <DependentUpon>BasicSubPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DrillInPage.xaml.cs">
-      <DependentUpon>DrillInPage.xaml</DependentUpon>
+    <Compile Include="Views\LocationCapture.xaml.cs">
+      <DependentUpon>LocationCapture.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Friends.xaml.cs">
       <DependentUpon>Friends.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\LandingPage.xaml.cs">
-      <DependentUpon>LandingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Destinies.xaml.cs">
+      <DependentUpon>Destinies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User.xaml.cs">
+      <DependentUpon>User.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -127,19 +126,25 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\SharedContent\media\smalltile-sdk.png">
-      <Link>Assets\smalltile-sdk.png</Link>
-    </Content>
-    <Content Include="..\..\..\SharedContent\media\splash-sdk.png">
-      <Link>Assets\splash-sdk.png</Link>
-    </Content>
-    <Content Include="..\..\..\SharedContent\media\squaretile-sdk.png">
-      <Link>Assets\squaretile-sdk.png</Link>
-    </Content>
     <Content Include="..\..\..\SharedContent\cs\Default.rd.xml">
       <Link>Properties\Default.rd.xml</Link>
     </Content>
-    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\avatar.png" />
+    <Content Include="Assets\avatar_Laize.jpg" />
+    <Content Include="Assets\baloes_1-150-150.scale-100.png" />
+    <Content Include="Assets\baloes_1-30-30.png" />
+    <Content Include="Assets\baloes_1-310-150.scale-100.png" />
+    <Content Include="Assets\baloes_1-310-310.scale-100.png" />
+    <Content Include="Assets\baloes_1-44-44.png" />
+    <Content Include="Assets\baloes_1-620-300.png" />
+    <Content Include="Assets\baloes_1-70-70.png" />
+    <Content Include="Assets\Lrocf4 1920x1080.png" />
+    <Content Include="Assets\mappin.png" />
+    <Content Include="Assets\squaretile-sdk.scale-100.png" />
+    <Content Include="Assets\storelogo-sdk.png" />
+    <Content Include="smalltile-sdk.scale-100.png" />
+    <Content Include="splash-sdk.scale-100.png" />
+    <Content Include="squaretile-sdk.scale-100.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -155,23 +160,11 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Views\BasicPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="AppShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CommandBarPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BasicSubPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DrillInPage.xaml">
+    <Page Include="Views\LocationCapture.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,9 +172,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\LandingPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Views\Destinies.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup />

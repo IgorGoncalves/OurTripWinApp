@@ -14,10 +14,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using NavigationMenuSample.Controls;
-using NavigationMenuSample.Views;
+using OurTrip.Controls;
+using OurTrip.Views;
 
-namespace NavigationMenuSample
+namespace OurTrip
 {
     /// <summary>
     /// The "chrome" layer of the app that provides top-level navigation with
@@ -32,9 +32,23 @@ namespace NavigationMenuSample
                 new NavMenuItem()
                 {
                     Symbol = Symbol.Account,
-                    Label = "Basic Page",
-                    DestPage = typeof(BasicPage)
+                    Label = "Perfil",
+                    DestPage = typeof(User)
                 },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Map,
+                    Label = "Meus destinos",
+                    DestPage = typeof(Destinies)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.AddFriend,
+                    Label = "Viajantes perto",
+                    DestPage = typeof(BasicSubPage)
+                },
+                
+                /*
                 new NavMenuItem()
                 {
                     Symbol = Symbol.MapPin,
@@ -47,12 +61,7 @@ namespace NavigationMenuSample
                     Label = "Drill In Page",
                     DestPage = typeof(DrillInPage)
                 },
-                new NavMenuItem()
-                {
-                    Symbol = Symbol.AddFriend,
-                    Label = "Adicionar Amigo",
-                    DestPage = typeof(Friends)
-                },
+                */
             });
 
         public static AppShell Current = null;

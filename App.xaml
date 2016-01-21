@@ -1,9 +1,9 @@
 ﻿<Application
-    x:Class="NavigationMenuSample.App"
+    x:Class="OurTrip.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:c="using:NavigationMenuSample.Common"
-    xmlns:local="using:NavigationMenuSample">
+    xmlns:c="using:OurTrip.Common"
+    xmlns:local="using:OurTrip">
 
     <Application.Resources>
         <ResourceDictionary>

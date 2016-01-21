@@ -17,9 +17,10 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=402347&clcid=0x409
 
-namespace NavigationMenuSample
+namespace OurTrip
 {
     using Views;
+    using Windows.UI.Notifications;
 
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -34,6 +35,7 @@ namespace NavigationMenuSample
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            TileUpdateManager.CreateTileUpdaterForApplication().Clear();
         }
 
         /// <summary>
@@ -79,7 +81,7 @@ namespace NavigationMenuSample
             {
                 // When the navigation stack isn't restored, navigate to the first page
                 // suppressing the initial entrance animation.
-                shell.AppFrame.Navigate(typeof(LandingPage), e.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
+                shell.AppFrame.Navigate(typeof(User), e.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
             }
 
             // Ensure the current window is active

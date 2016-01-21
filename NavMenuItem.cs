@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
-namespace NavigationMenuSample
+namespace OurTrip
 {
     /// <summary>
     /// Data to represent an item in the nav menu.

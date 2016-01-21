@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="OurTrip.Views.Destinies"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OurTrip"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="frame" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0,20,0,0" Grid.Column="0" Grid.Row="0">
+            <maps:MapControl x:Name="myMap" MapServiceToken="hhMv8ajbsNkjTqZbNmIYHQ"
+        			ZoomLevel="{Binding Value, ElementName=zoomSlider, Mode=TwoWay}"
+        			Heading="{Binding Value, ElementName=headingSlider, Mode=TwoWay}"
+        			DesiredPitch="{Binding Value, ElementName=desiredPitchSlider, Mode=TwoWay}" Margin="0,-16,-1,0" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" MinHeight="200" Height="auto" MinWidth="200" Width="auto"/>
+        </Frame>
+        <Grid x:Name="gridList" Grid.Column="1">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Meus Locais" VerticalAlignment="Top" FontSize="42" Height="56" Width="226" Margin="112,4,0,0" />
+            <ListView x:Name="listView" IsItemClickEnabled="True" ItemClick="listView_ItemClick"  ItemsSource="{Binding Locations}"  Width="auto" Height="646" MinWidth="100" MinHeight="100"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="-2,73,2,0"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontWeight="Bold">
+        						<Run Text="Name"/>
+                            </TextBlock>
+                            <TextBlock Text="{Binding TitleName}"/>
+                            <!--<TextBlock FontWeight="Bold">
+        						<Run Text="Modified"/>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Description}"/>-->
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+
+
+    </Grid>
+</Page>
